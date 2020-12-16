@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<GridPane alignment="CENTER" hgap="10" prefHeight="400.0" prefWidth="600.0" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yuriykusch.TicTacToe.controllers.LoginPageController">
+    <Label text="Логин:" />
+    <TextField fx:id="loginField" GridPane.columnIndex="1" />
+    <Label text="Пароль:" GridPane.rowIndex="1" />
+    <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+    <Label visible="false" fx:id="repeatPasswordLabel" text="Повторите пароль:" GridPane.rowIndex="2" />
+    <PasswordField visible="false" fx:id="repeatPasswordField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+    <Button fx:id="notRegisteredButton" maxWidth="1.7976931348623157E308" onAction="#onNotRegisteredClick" text="Ещё не зарегистрирован" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+    <Button fx:id="loginRegisterButton" maxWidth="1.7976931348623157E308" onAction="#onLoginRegisterClick" text="Войти" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+
+    <ProgressIndicator fx:id="progressIndicator" visible="false" maxWidth="1.7976931348623157E308" GridPane.columnSpan="2" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+    <Text fx:id="messageText" textAlignment="CENTER" GridPane.rowIndex="6" GridPane.columnSpan="2"/>
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane prefHeight="800.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yuriykusch.TicTacToe.controllers.GamePageController">
+    <Button onAction="#onShowRecordsClick" maxWidth="1.7976931348623157E308" prefHeight="26.0" prefWidth="600.0" text="Турнирная таблица" />
+    <HBox alignment="CENTER" prefHeight="600.0" prefWidth="700.0" GridPane.rowIndex="1">
+        <GridPane fx:id="gameFieldContainer" alignment="CENTER" prefHeight="600.0" prefWidth="600.0" style="-fx-grid-lines-visible: true;">
+            <columnConstraints>
+                <ColumnConstraints prefWidth="150" />
+                <ColumnConstraints prefWidth="150" />
+                <ColumnConstraints prefWidth="150" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints prefHeight="150" />
+                <RowConstraints prefHeight="150" />
+                <RowConstraints prefHeight="150" />
+            </rowConstraints>
+        </GridPane>
+    </HBox>
+    <HBox fx:id="chooserContainer" alignment="CENTER" prefHeight="100" spacing="10" GridPane.rowIndex="2">
+        <Label text="Выберите за кого играть:" />
+        <Button onAction="#onChooserCrossClick" maxHeight="50" maxWidth="50" prefHeight="50" prefWidth="50" style="-fx-background-image: url('icons/cross.png'); -fx-background-size: 50px;" />
+        <Button onAction="#onChooserCircleClick" maxHeight="50" maxWidth="50" prefHeight="50" prefWidth="50" style="-fx-background-image:  url('icons/circle.png'); -fx-background-size: 50px" />
+    </HBox>
+    <Label visible="false" fx:id="yourTurnLabel" alignment="CENTER" maxWidth="1.7976931348623157E308" style="-fx-font-size: 35;" text="Ваш ход" textAlignment="CENTER" textFill="green" GridPane.rowIndex="3" />
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+
+</GridPane>
